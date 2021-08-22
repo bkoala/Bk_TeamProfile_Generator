@@ -10,5 +10,14 @@ describe("Manager", () => {
         expect(eng.officeNumber).toEqual(5);
         expect(eng.role).toEqual("Manager");
       });
+       //Test get Role Methods
+      describe("getRole Method", () => {
+        it("Get the Role", () => {
+            const emp = new Manager(15);
+            expect(emp.getRole()).toBe("Manager");
+        });
+      });
+ 
+
     });
 });

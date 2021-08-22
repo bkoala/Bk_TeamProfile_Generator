@@ -10,5 +10,20 @@ describe("Engineer", () => {
         expect(eng.gitHub).toEqual("bkola");
         expect(eng.role).toEqual("Engineer");
       });
+      //Test get Name Methods
+      describe("gitHub Method", () => {
+        it("Get the gitHub name", () => {
+            const emp = new Engineer("bSmith");
+            expect(emp.getGithub()).toBe("bSmith");
+        });
+      });
+       //Test get Role Methods
+      describe("getRole Method", () => {
+        it("Get the Role", () => {
+            const emp = new Engineer("bSmith");
+            expect(emp.getRole()).toBe("Engineer");
+        });
+      });
+
     });
 });

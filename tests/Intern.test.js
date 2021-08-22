@@ -10,5 +10,20 @@ describe("Intern", () => {
         expect(eng.school).toEqual("UWA");
         expect(eng.role).toEqual("Intern");
       });
+
+        //Test get Name Methods
+        describe("gitSchool Method", () => {
+            it("Get the School name", () => {
+                const emp = new Intern("UWA");
+                expect(emp.getSchool()).toBe("UWA");
+            });
+          });
+           //Test get Role Methods
+          describe("getRole Method", () => {
+            it("Get the Role", () => {
+                const emp = new Intern("UWAT");
+                expect(emp.getRole()).toBe("Intern");
+            });
+          });
     });
 });
