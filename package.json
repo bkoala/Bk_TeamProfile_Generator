@@ -1,0 +1,23 @@
+{
+  "name": "bk_teamprofile_generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bkoala/Bk_TeamProfile_Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bkoala/Bk_TeamProfile_Generator/issues"
+  },
+  "homepage": "https://github.com/bkoala/Bk_TeamProfile_Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2",
+    "jest": "^24.9.0"
+  }
+}
