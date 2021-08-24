@@ -14,10 +14,31 @@ var allAnswers=[];
 // create writeFile function using promises instead of a callback function
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// TODO: Create an array of questions for user input
+
+//Input Validations
+const NumberValidator = async (input) => {
+  if (isNaN(input)) {
+     return 'Please enter a number!';
+  }
+  return true;
+}
+// Email Validator 
+
+const EmailValidator = async (input) =>{
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input))
+  {
+    return (true)
+  }
+    return 'Please enter a valid email address!'
+}
+  
+// Create an array of questions for user input
 /*
 team manager’s name, employee ID, email address, and office number
 */
+
+//check Number Validation
+
 function getAnswers(xxx) {
 const questions = [
 { type: 'input',
@@ -25,13 +46,19 @@ const questions = [
   message: 'What is the team Manager Name?',},
   { type: 'input',
   name: 'mngId',
-  message: 'What is the Manager Employee Id',},
+  message: 'What is the Manager Employee Id',
+  validate: NumberValidator,
+ },
   { type: 'input',
+  message:'What is the Manager Email?' ,
   name: 'mngEmail',
-  message:'What is the Manager Email?' ,},
+  validate:EmailValidator,
+},
   { type: 'input',
   name: 'mngofficeNumber',
-  message:'What is the Manager office number?' ,},
+  message:'What is the Manager office number?' ,
+  validate: NumberValidator,
+},
   
 ];
 //Engineer’s name, ID, email, and GitHub username
@@ -41,10 +68,14 @@ const questions1 = [
     message: 'What is the Engineer Name?',},
     { type: 'input',
   name: 'engId',
-  message: 'What is the Engineer employee Id',},
+  message: 'What is the Engineer employee Id',
+  validate: NumberValidator,
+},
     { type: 'input',
+    message:'What is the Engineer Email?' ,
     name: 'engEmail',
-    message:'What is the Engineer Email?' ,},
+    validate: EmailValidator,
+  },
     { type: 'input',
     name: 'engitHub',
     message:'What is the Engineer github name?' ,},
@@ -71,10 +102,14 @@ const questions2 = [
     message: 'What is the Intern Name?'},
     { type: 'input',
       name: 'intId',
-     message: 'What is the Intern employee Id',},
+     message: 'What is the Intern employee Id',
+     validate: NumberValidator,
+    },
     { type: 'input',
+    message:'What is the Intern Email?' ,
     name: 'intEmail',
-    message:'What is the Intern Email?' ,},
+    validate: EmailValidator, 
+  },
     { type: 'input',
     name: 'intSchool',
     message:'What is the Intern School name?' ,},
