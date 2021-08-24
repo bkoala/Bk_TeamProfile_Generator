@@ -44,7 +44,7 @@ function generateMarkdown(data) {
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
      <style>
      .myJumbo 
-     { background-color: #f71c27f3;text-align:center;color:#fff; }
+     { background-color: #1c2bf7f3;text-align:center;color:#fff; }
     .headsize
      {font-size:24px;color:white; 
      }
