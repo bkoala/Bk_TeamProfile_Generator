@@ -42,13 +42,14 @@ function generateMarkdown(data) {
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <style>
+     <style>
      .myJumbo 
-     { background-color: #E64545;
-        text-align:center;
-        color:white; }
+     { background-color: #f71c27f3;text-align:center;color:#fff; }
     .headsize
-     {font-size:24px; color:white;  
+     {font-size:24px;color:white; 
+     }
+     .footercontent{
+      background-color:#f71c27f3;margin-top:30px;  padding:30px 0px; color:#fff;font-size:16px;text-align:center;
      }
    </style>
      <title>Document</title>
@@ -64,6 +65,9 @@ function generateMarkdown(data) {
      </div>    
        ${text3}
    </div> 
+   <div class="footer">
+   <div class="footer-copyright footercontent">© 2021 Copyright:  Ben Koala, 2021 UW BootCamp
+  </div>
  </body>
  </html> 
 
