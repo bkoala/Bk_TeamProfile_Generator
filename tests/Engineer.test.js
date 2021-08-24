@@ -20,7 +20,7 @@ describe("Engineer", () => {
        //Test get Role Methods
       describe("getRole Method", () => {
         it("Get the Role", () => {
-            const emp = new Engineer("bSmith");
+            const emp = new Engineer("JobBdfa", 5, "ben@hotmail.com","bSmith");
             expect(emp.getRole()).toBe("Engineer");
         });
       });

@@ -8,12 +8,12 @@ function generateMarkdown(data) {
 //  console.log(Answerd.length);
  //Put Manager information 
   var text1="<div class='col-sm-4'> <div class='card'><div class='card-header bg-primary headsize'>" + `${Answerd[0].name} `+ "<br><i class='fa fa-coffee'></i> " + `${Answerd[0].role}` +"</div>";
-  text1 += "<div class='card-body'><p>ID: "+ ` ${Answerd[0].id}` + "<hr></p><p>Email: " + `${Answerd[0].email} ` + "<hr></p><p>OFfice Number: " + `${Answerd[0].officeNumber}` + "</p></div></div></div>";
+  text1 += "<div class='card-body'><p>ID: "+ ` ${Answerd[0].id}` + "<hr></p><p>Email: <a href='mailto:" + `${Answerd[0].email} ` + "'>" +`${Answerd[0].email} ` +"</a><hr></p><p>OFfice Number: " + `${Answerd[0].officeNumber}` + "</p></div></div></div>";
   var text2=""; var text3=""; 
   for( let xx=1;xx<Answerd.length; xx++)
   {  var text6=""; var text7="";
       if(Answerd[xx].role==="Engineer"){
-          text6="Github: " + Answerd[xx].gitHub;
+          text6="Github: <a href='https://github.com/" + Answerd[xx].gitHub + "'>" + Answerd[xx].gitHub +"</a>";
           text7="<i class='fa fa-eye'></i> " + Answerd[xx].role;
       } else if(Answerd[xx].role==="Intern")
        { text6="School: " + Answerd[xx].school; 
@@ -22,13 +22,13 @@ function generateMarkdown(data) {
         
     
       if(xx < 3){
-     text2 += "<div class='col-sm-4'><div class='card'><div class='card-header bg-primary headsize'>" +`${Answerd[xx].name}` + "<br>" + `${text7}` +"</div><div class='card-body'><p>ID: " + `${Answerd[xx].id}` + "<hr></p><p>Email: " + `${Answerd[xx].email} ` + "<hr></p><p> " + `${text6}` +"</p></div></div></div>";
+     text2 += "<div class='col-sm-4'><div class='card'><div class='card-header bg-primary headsize'>" +`${Answerd[xx].name}` + "<br>" + `${text7}` +"</div><div class='card-body'><p>ID: " + `${Answerd[xx].id}` + "<hr></p><p>Email: <a href='mailto:" + `${Answerd[xx].email} ` + "'>"+  `${Answerd[xx].email} ` +  "</a><hr></p><p> " + `${text6}` +"</p></div></div></div>";
      }else{
         text4=""; text5="";
         
        if ((xx % 3) === 0){ text4="<div style='padding-top:10px'></div><div class='row'>" ; } 
        if(((xx % 3) === 2) || (xx=== (Answerd.length-1) )) { text5="</div>" ;}
-       text3 +=text4+"<div class='col-sm-4'><div class='card'><div class='card-header bg-primary headsize'>" + `${Answerd[xx].name}` +"<br>"+`${text7}` +"</div><div class='card-body'><p>ID: "+ `${Answerd[xx].id}` +"<hr></p><p>Email: "+ `${Answerd[xx].email}`+"<hr></p><p> "+ `${text6}`+"</p></div></div></div>"+text5;
+       text3 +=text4+"<div class='col-sm-4'><div class='card'><div class='card-header bg-primary headsize'>" + `${Answerd[xx].name}` +"<br>"+`${text7}` +"</div><div class='card-body'><p>ID: "+ `${Answerd[xx].id}` +"<hr></p><p>Email: <a href='mailto:"+ `${Answerd[xx].email}`+ "'>" + `${Answerd[xx].email} ` +  "</a><hr></p><p> "+ `${text6}`+"</p></div></div></div>"+text5;
       
       }
 
@@ -52,7 +52,7 @@ function generateMarkdown(data) {
       background-color:#f71c27f3;margin-top:30px;  padding:30px 0px; color:#fff;font-size:16px;text-align:center;
      }
    </style>
-     <title>Document</title>
+     <title>Team Profile Generator</title>
    </head>
    <body>
      <div class="jumbotron jumbotron-fluid myJumbo">
