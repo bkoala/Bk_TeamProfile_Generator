@@ -14,10 +14,10 @@ When a user clicks on the GitHub username he is taken to the  GitHub profile of 
 ##
 At the start of the application the user is prompted to enter the team manager’s name, employee ID, email address, and office number.  Afther entering all requested information a menu is displayed where the user has the option to add an engineer or an intern or to exit the application
 ##
-When the user select the engineer option, then he is prompted to enter the engineer’s name, ID, email, and GitHub username, and he is taken back to the menu where he could then choose an option from the menu. The intern option allows the user to enter
+When the user selects the engineer option, he is prompted to enter the engineer’s name, ID, email, and GitHub username, and he is taken back to the menu where he could then choose an option from the menu. The intern option allows the user to enter
 the intern’s name, ID, email, and school to be added to the team. 
 ##
-When the user decides to finish building his team he could exit the application with the exit option and an "index.html" file is generated and put under the "dist" folder.  Below a screen shot of a generated file is shown. 
+When the user decides to finish building his team he could exit the application with the exit option and an "index.html" file is generated and put under the "dist" folder.  Below is shown a screen shot of a generated team profile. 
 ##
  All user's inputs are validated prior to being accepted by the application.
 
