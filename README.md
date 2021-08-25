@@ -14,6 +14,8 @@ When the user select the engineer option, then he is prompted to enter the engin
 the intern’s name, ID, email, and school to be added to the team. 
 When the user decides to finish building his team he could exit the application with the exit option and an "index.html" file is generated and put under the "dist" folder.  Below a screen shot of a generated file is shown.  All user input are validated prior to being accepted by the application.
 
-# Video Link
+Github Link Repo Link :
 
-# Sample Profile Generated Screen Shot
+Demo Video link : https://drive.google.com/file/d/18baVOZx6pF9uUAcxVnoRRtzXi_EYEc-U/view
+
+Application Screen Shot :![Screenshot](Profile_screenshot.png)
